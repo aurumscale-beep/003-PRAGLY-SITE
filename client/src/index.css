@@ -158,3 +158,17 @@ img { display: block; max-width: 100%; }
 
 @media (prefers-reduced-motion: no-preference) { .hero__content, .about__intro, .about__photo-frame, .services__heading, .pest-card, .coverage__content, .location-section__copy, .map-card { animation: arrive .64s var(--ease-out) both; }.about__photo-frame { animation-delay: .07s; }.pest-card:nth-child(2) { animation-delay: .05s; }.pest-card:nth-child(3) { animation-delay: .1s; }.pest-card:nth-child(4) { animation-delay: .15s; }.pest-card:nth-child(5) { animation-delay: .2s; }.pest-card:nth-child(6) { animation-delay: .25s; } }
 @keyframes arrive { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* CTA traffic layer: a polished lime pulse and a short light sweep create priority without visual noise. */
+.button--traffic, .nav-cta--traffic { position: relative; isolation: isolate; overflow: hidden; background: linear-gradient(112deg, #718710 0%, #a6c633 45%, #d6ed74 100%); box-shadow: 0 10px 22px rgba(133,159,24,.32), 0 0 0 1px rgba(235,255,153,.54) inset; }
+.button--traffic::before, .nav-cta--traffic::before { content: ""; position: absolute; z-index: -1; top: -120%; left: -62%; width: 40%; height: 340%; transform: rotate(22deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.85), transparent); animation: traffic-sheen 3.2s var(--ease-in-out) infinite; }
+.button--traffic::after, .nav-cta--traffic::after { content: ""; position: absolute; z-index: -2; inset: 2px; border: 1px solid rgba(255,255,255,.48); border-radius: inherit; opacity: .55; }
+
+/* Real pest-photo treatment: a restrained ivory disc preserves the consistent clinical card aesthetic. */
+.pest-card__image { width: 108px; height: 108px; margin: -4px auto 14px; display: grid; place-items: center; overflow: hidden; border: 1px solid rgba(18,61,53,.05); border-radius: 50%; background: #f1f0e9; box-shadow: 0 7px 16px rgba(18,61,53,.06); }
+.pest-card__image img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; transform: scale(1.36); transition: transform 240ms var(--ease-out); }
+.pest-card:hover .pest-card__image img { transform: scale(1.48); }
+
+@keyframes traffic-sheen { 0%, 22% { left: -62%; opacity: 0; } 28% { opacity: .95; } 49%, 100% { left: 138%; opacity: 0; } }
+@media (max-width: 620px) { .pest-card__image { width: 76px; height: 76px; margin-bottom: 10px; }.pest-card__image img { transform: scale(1.29); } }
+@media (prefers-reduced-motion: reduce) { .button--traffic::before, .nav-cta--traffic::before { animation: none; opacity: .38; left: 42%; } }

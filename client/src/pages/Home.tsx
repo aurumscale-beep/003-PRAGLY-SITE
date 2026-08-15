@@ -6,7 +6,6 @@
 import {
   ArrowDown,
   ArrowRight,
-  Bug,
   Check,
   ChevronRight,
   Clock3,
@@ -17,7 +16,6 @@ import {
   Menu,
   MessageCircle,
   Phone,
-  Rat,
   ShieldCheck,
   Sparkles,
   UserRound,
@@ -32,32 +30,38 @@ const pests = [
   {
     name: "Formigas",
     description: "Eliminamos colónias e evitamos que voltem ao seu lar.",
-    icon: Bug,
+    image: "/manus-storage/pragy-real-ant_d1f232ef.jpg",
+    alt: "Fotografia macro de uma formiga",
   },
   {
     name: "Baratas",
     description: "Controlo eficaz contra baratas alemãs, americanas e orientais.",
-    icon: Bug,
+    image: "/manus-storage/pragy-real-cockroach_f017354e.jpg",
+    alt: "Fotografia de uma barata",
   },
   {
     name: "Ratos",
     description: "Eliminamos roedores e protegemos a sua casa contra novas infestações.",
-    icon: Rat,
+    image: "/manus-storage/pragy-real-rat_5e7e9842.jpg",
+    alt: "Fotografia de um rato",
   },
   {
     name: "Aranhas",
     description: "Remoção segura e prevenção contra novas aparições.",
-    icon: Sparkles,
+    image: "/manus-storage/pragy-real-spider_8a4cf4f7.jpg",
+    alt: "Fotografia macro de uma aranha",
   },
   {
-    name: "Mosquitos",
-    description: "Controlo de mosquitos comuns e transmissores de doenças.",
-    icon: Bug,
+    name: "Escorpiões",
+    description: "Prevenção e controlo seguro de escorpiões em áreas internas e externas.",
+    image: "/manus-storage/pragy-real-scorpion_e9cc4c58.jpg",
+    alt: "Fotografia de um escorpião",
   },
   {
     name: "Percevejos",
     description: "Tratamento específico para recuperar o conforto do seu espaço.",
-    icon: Bug,
+    image: "/manus-storage/pragy-real-bedbug_20f59c8e.jpg",
+    alt: "Fotografia macro de um percevejo",
   },
 ];
 
@@ -127,7 +131,7 @@ export default function Home() {
             <a href="#diferenciais">Diferenciais</a>
             <a href="#contato">Contato</a>
           </div>
-          <a className="nav-cta" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+          <a className="nav-cta nav-cta--traffic" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
             <span>Orçamento rápido</span><MessageCircle size={18} />
           </a>
           <div className="mobile-nav-actions">
@@ -160,7 +164,7 @@ export default function Home() {
             <div className="lime-rule" />
             <p className="hero__body">Soluções completas e seguras para eliminar pragas e proteger o que é mais importante: sua família, sua empresa e seu bem-estar.</p>
             <div className="hero__actions">
-              <a className="button button--primary" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Fale com um especialista <MessageCircle size={19} /></a>
+              <a className="button button--primary button--traffic" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Fale com um especialista <MessageCircle size={19} /></a>
               <a className="button button--outline" href="#servicos">Nossos serviços <ArrowDown size={18} /></a>
             </div>
           </div>
@@ -208,9 +212,9 @@ export default function Home() {
             <div className="lime-rule" />
           </div>
           <div className="pest-grid" id="pragas">
-            {pests.map(({ name, description, icon: Icon }) => (
+            {pests.map(({ name, description, image, alt }) => (
               <article className="pest-card" key={name}>
-                <div className="pest-card__icon"><Icon size={45} strokeWidth={1.35} /></div>
+                <div className="pest-card__image"><img src={image} alt={alt} /></div>
                 <h3>{name}</h3>
                 <p>{description}</p>
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label={`Solicitar informação sobre ${name}`}><ChevronRight size={26} /></a>
@@ -223,7 +227,7 @@ export default function Home() {
             <h3>Não encontrou a<br />praga <em>que procura?</em></h3>
             <span className="service-callout__divider" />
             <p>Fale com nossos especialistas. Temos soluções personalizadas para cada tipo de necessidade.</p>
-            <a className="button button--primary" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Falar com especialista <MessageCircle size={20} /></a>
+            <a className="button button--primary button--traffic" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Falar com especialista <MessageCircle size={20} /></a>
           </aside>
         </section>
 
