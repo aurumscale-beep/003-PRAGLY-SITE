@@ -12,8 +12,8 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
+      {/* GitHub Pages serves this SPA below /003-PRAGLY-SITE/; fall back to the home for that prefix. */}
+      <Route component={Home} />
     </Switch>
   );
 }
