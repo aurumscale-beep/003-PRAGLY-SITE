@@ -7,10 +7,13 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 
+const GITHUB_PAGES_BASE = "/003-PRAGLY-SITE";
+const HOME_PATH = window.location.pathname.startsWith(GITHUB_PAGES_BASE) ? `${GITHUB_PAGES_BASE}/` : "/";
+
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={HOME_PATH} component={Home} />
       <Route path={"/404"} component={NotFound} />
       {/* GitHub Pages serves this SPA below /003-PRAGLY-SITE/; fall back to the home for that prefix. */}
       <Route component={Home} />

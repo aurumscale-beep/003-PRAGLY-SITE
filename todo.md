@@ -4,3 +4,4 @@
 - [x] Redesenhar o botão de conversão com destaque luminoso animado, foco acessível e redução de movimento respeitada.
 - [x] Validar a secção de pragas em desktop e mobile e guardar a nova versão.
 - [ ] Corrigir a rota base do GitHub Pages para a home não cair na página 404 no subcaminho do repositório.
+- [ ] Reconhecer explicitamente o prefixo /003-PRAGLY-SITE/ no router para garantir o carregamento da home publicada.
