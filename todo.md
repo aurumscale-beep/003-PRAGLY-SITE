@@ -3,8 +3,3 @@
 - [x] Aplicar as fotografias nos cartões com tratamento visual consistente e responsivo.
 - [x] Redesenhar o botão de conversão com destaque luminoso animado, foco acessível e redução de movimento respeitada.
 - [x] Validar a secção de pragas em desktop e mobile e guardar a nova versão.
-- [x] Confirmar a conexão GitHub e o proprietário do repositório.
-- [ ] Criar o repositório público GitHub com o nome 003-PRAGLY-SITE.
-- [ ] Exportar o código actual para um repositório GitHub.
-- [ ] Configurar e activar GitHub Pages com o build estático da aplicação.
-- [ ] Validar o URL público e entregar o link final.
