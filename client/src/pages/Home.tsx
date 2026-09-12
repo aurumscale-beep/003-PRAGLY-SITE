@@ -18,7 +18,6 @@ import {
   Phone,
   ShieldCheck,
   Sparkles,
-  Star,
   UserRound,
   X,
 } from "lucide-react";
@@ -80,12 +79,6 @@ const reasons = [
   "Compromisso com a saúde e o meio ambiente",
 ];
 
-const customerHighlights = [
-  { quote: "Explicaram cada etapa com calma e deixaram tudo organizado depois do serviço.", label: "Atendimento claro" },
-  { quote: "Consegui agendar rápido e senti segurança desde o primeiro contato.", label: "Resposta ágil" },
-  { quote: "O cuidado com a casa e com a nossa rotina fez toda a diferença.", label: "Cuidado no ambiente" },
-];
-
 function BadgeRibbon({ className }: { className?: string }) {
   return <ShieldCheck className={className} aria-hidden="true" />;
 }
@@ -136,7 +129,6 @@ export default function Home() {
             <a href="#servicos">Serviços</a>
             <a href="#pragas">Pragas</a>
             <a href="#diferenciais">Diferenciais</a>
-            <a href="#avaliacoes">Avaliações</a>
             <a href="#contato">Contato</a>
           </div>
           <a className="nav-cta nav-cta--traffic" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
@@ -158,7 +150,6 @@ export default function Home() {
           <a onClick={closeMenu} href="#servicos">Serviços</a>
           <a onClick={closeMenu} href="#pragas">Pragas</a>
           <a onClick={closeMenu} href="#diferenciais">Diferenciais</a>
-          <a onClick={closeMenu} href="#avaliacoes">Avaliações</a>
           <a onClick={closeMenu} href="#contato">Contato</a>
           <a className="mobile-menu__cta" onClick={closeMenu} href={WHATSAPP_URL} target="_blank" rel="noreferrer">Fale com um especialista <ArrowRight size={18} /></a>
         </div>
@@ -240,26 +231,6 @@ export default function Home() {
           </aside>
         </section>
 
-        <section className="trust-section" id="avaliacoes" aria-labelledby="trust-title">
-          <div className="trust-section__heading">
-            <p className="eyebrow">Experiência Pragy</p>
-            <h2 id="trust-title">Cuidado que aparece<br /><em>em cada detalhe.</em></h2>
-            <p>Um atendimento bem feito começa antes da aplicação e continua depois dela: com explicação clara, agilidade e respeito pelo seu espaço.</p>
-          </div>
-          <div className="trust-grid">
-            {customerHighlights.map(({ quote, label }) => (
-              <article className="trust-card" key={label}>
-                <div className="trust-card__stars" aria-label="Destaque de qualidade, cinco estrelas">
-                  {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={15} fill="currentColor" />)}
-                </div>
-                <p>“{quote}”</p>
-                <strong>{label}</strong>
-              </article>
-            ))}
-          </div>
-          <p className="trust-note">Quer compartilhar sua experiência? Fale com a nossa equipe pelo WhatsApp.</p>
-        </section>
-
         <section className="coverage" aria-label="Serviços de controlo residencial">
           <div className="coverage__image"><img src="/manus-storage/pragy-service-residential_76e87add.jpg" alt="Profissional a fazer inspeção preventiva num ambiente residencial" /></div>
           <div className="coverage__content">
@@ -302,7 +273,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <a className="floating-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="Fale com a Pragy pelo WhatsApp"><MessageCircle size={27} /><span>WhatsApp</span></a>
+      <a className="floating-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="Fale com a Pragy pelo WhatsApp"><MessageCircle size={26} /></a>
     </div>
   );
 }
