@@ -24,7 +24,7 @@ import {
 import { useState } from "react";
 
 const WHATSAPP_URL =
-  "https://wa.me/5511981936639?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20para%20dedetização.";
+  "https://wa.me/5511921321209?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20para%20dedetização.";
 
 const pests = [
   {
@@ -250,7 +250,7 @@ export default function Home() {
             <p>Conte com uma equipa preparada para atender a sua necessidade com agilidade, discrição e segurança.</p>
             <div className="location-details">
               <div><MapPin size={21} /><span><strong>Área de atendimento</strong>São Paulo – SP e região metropolitana</span></div>
-              <div><Phone size={21} /><span><strong>WhatsApp</strong>+55 11 98193-6639</span></div>
+              <div><Phone size={21} /><span><strong>WhatsApp</strong>+55 11 92132-1209</span></div>
             </div>
             <a className="button button--primary" href="https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Paulo%2C+SP" target="_blank" rel="noreferrer">Abrir no Google Maps <ArrowRight size={18} /></a>
           </div>
